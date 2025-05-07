@@ -2,12 +2,12 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <div>
-            <div className='w-full flex gap-2 justify-between'>
+        <div className="w-full px-4">
+            <div className='w-full flex gap-4 justify-between'>
                 <div>
                     <a href="#">Home</a>
                 </div>
-                <div className='flex gap-2'>
+                <div className='flex gap-4'>
                     <div>
                         <a href="/auth/login">login</a>
                     </div>

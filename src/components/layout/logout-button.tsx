@@ -22,7 +22,7 @@ const LogoutButton = () => {
         }
     }
     return (
-        <Button variant="ghost" className="cursor-pointer rounded-full" onClick={handleLogout}>
+        <Button variant="outline" className="cursor-pointer w-fit" onClick={handleLogout}>
             <LogOutIcon />
             Logout
         </Button>
