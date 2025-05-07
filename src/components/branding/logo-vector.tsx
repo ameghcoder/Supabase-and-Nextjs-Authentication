@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const LogoVector = ({ className }: { className?: string }) => {
     return (
-        <div>
+        <Link href="/">
             <Image
                 src="/assets/branding/Vector - Logo.png"
                 alt="Logo"
@@ -11,7 +12,7 @@ const LogoVector = ({ className }: { className?: string }) => {
                 height={28}
                 className={className}
             />
-        </div>
+        </Link>
     )
 }
 
