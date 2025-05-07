@@ -76,7 +76,7 @@ export function ForgotPassword() {
             </div>
             <Dialog>
                 <DialogTrigger asChild>
-                    <Button variant="link">Forgot Password</Button>
+                    <Button variant="ghost" className="px-1 text-blue-500 cursor-pointer">Forgot Password</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px] bg-card">
                     {

@@ -145,6 +145,7 @@ export default function Page() {
                             description={`Thanks for Join us. We've sent you a verification link to the email address ${email}. Verify you E-mail and comeback to login.`}
                             link="https://gmail.com"
                             linkText="Open Mail Box →"
+                            email={email}
                         />
                         :
                         <SignupForm

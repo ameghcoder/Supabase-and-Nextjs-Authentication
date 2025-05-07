@@ -1,12 +1,14 @@
 import React from 'react'
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
+import { ResendConfirmationEmailButton } from './resend-confirmation-email'
 
-const ConfirmationCard = ({ title, description, link, linkText }: {
+const ConfirmationCard = ({ title, description, link, linkText, email }: {
     title: string,
     description: string,
     link?: string,
-    linkText?: string
+    linkText?: string,
+    email: string
 }) => {
     return (
         <Card className='max-w-lg mx-auto py-4'>
@@ -15,12 +17,15 @@ const ConfirmationCard = ({ title, description, link, linkText }: {
                 <p className='mb-4 text-center text-paragraph text-muted-foreground'>
                     {description}
                 </p>
-                {
-                    link &&
-                    <Button variant="default">
-                        <a href={link} target="_blank" >{linkText}</a>
-                    </Button>
-                }
+                <div className='flex gap-2 justify-center items-center'>
+                    <ResendConfirmationEmailButton email={email} />
+                    {
+                        link &&
+                        <Button type="button" variant="outline">
+                            <a href={link} target="_blank" >{linkText}</a>
+                        </Button>
+                    }
+                </div>
             </CardContent>
 
         </Card>

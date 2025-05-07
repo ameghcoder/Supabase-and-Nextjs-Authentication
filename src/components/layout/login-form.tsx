@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label"
 import { LogoVector } from "../branding/logo-vector"
 import { LoaderCircle } from "lucide-react"
 import { ForgotPassword } from "./forgot-password"
+import { ResendConfirmationEmailCard } from "./resend-confirmation-email"
 
 export function LoginForm({
     className,
@@ -74,10 +75,18 @@ export function LoginForm({
                                 </span> : "Log in"}
                             </Button>
                             <div className="text-center text-sm">
-                                Don&apos;t have an account?{" "}
-                                <a href="/auth/signup" className="underline underline-offset-4">
-                                    Sign up
-                                </a>
+                                <div>
+                                    Don&apos;t have an account?{" "}
+                                    <Button variant="ghost" className="px-1 text-blue-500 underline">
+                                        <a href="/auth/signup">
+                                            Signup
+                                        </a>
+                                    </Button>
+                                </div>
+                                <div>
+                                    Failed to Confirm Email?{" "}
+                                    <ResendConfirmationEmailCard />
+                                </div>
                             </div>
                         </div>
                     </form>

@@ -8,8 +8,8 @@ import Link from 'next/link';
 import { X } from 'lucide-react';
 import { EmailOtpType } from '@supabase/supabase-js';
 import AfterEmailConfirmation from './action';
-import EmailConfirmed from '@/components/template/EmailConfirmed';
-import UpdatePasswordForm from '@/components/template/UpdatePassword';
+import EmailConfirmed from '@/components/layout/email-confirmation-card';
+import UpdatePasswordForm from '@/components/layout/update-password';
 import { supabase } from '@/utils/supabase/client';
 
 
