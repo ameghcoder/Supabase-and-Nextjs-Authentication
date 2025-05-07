@@ -11,7 +11,8 @@ This template includes:
 - 🔄 Redirect pages for confirm/reset actions
 - 🧰 Clean, reusable authentication components using **ShadCN UI**
 - ⚡ Built with Next.js App Router
-
+- Future Updates - Login with Social Media
+ 
 ---
 
 ## 🚀 Getting Started
@@ -98,17 +99,23 @@ You can modify the roles for each policy based on your use.
 
 ### (ii). *Last and final step before using the Authentication, you need to change the email template to support a server-side authentication flow.*
 
-For doing so, Go to the Auth templates page in your dashboard. In the Confirm signup template, change <span style="color:lime;">*{{ .ConfirmationURL }} to {{ .SiteURL }}/auth/verify?token_hash={{ .TokenHash }}&type=email*</span> here is the path to find this template code
+For doing so, Go to the Auth templates page in your dashboard. In the Confirm signup template, change <span style="color:lime;">*{{ .ConfirmationURL }} to {{ .SiteURL }}/auth/verify?token_hash={{ .TokenHash }}&type=signup*</span> here is the path to find this template code
 
 First go to your project > click on authentication > then click on Emails.
 
 Here you will find out many email templates, but you only need to focus on **Confirm signup** and **Reset Password**, change their url as shown in the following image.
 
-*For Confirm Signup Template*
+## For Confirm Signup Template*
+
+- Change this *{{ .ConfirmationURL }}* to this *{{ .SiteURL }}/auth/verify?token_hash={{ .TokenHash }}&type=signup*
 ![Confirm Your Signup Template](./public/preview/confirm-your-signup.png)
 
-*For Reset Password Template*
+## For Reset Password Template
+
+- Change this *{{ .ConfirmationURL }}* to this *{{ .SiteURL }}/auth/verify?token_hash={{ .TokenHash }}&type=recovery*
 ![Reset Password Template](./public/preview/reset-your-password.png)
+
+> Note: Above task is necessary otherwise your verification email link and reset password link is not working properly
 
 Now here your Authentication setup for Next.js using Supabase is completed now you can run this project and
 
