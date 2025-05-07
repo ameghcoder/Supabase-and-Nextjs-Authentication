@@ -127,11 +127,13 @@ Now here your Authentication setup for Next.js using Supabase is completed now y
 - `/auth/login` – Login with email and password
 - `/auth/signup` – Create a new account
 - `/auth/login` - Contains a button for forgot-password that opens a pop us to reset password
+- `/auth/login` & `/auth/signup` - Contains a button for Resend Confirmation link, if someone miss of forgot to verify email, that opens a pop us to send verification email
 
 ### 📩 Supabase Redirect Pages
 
-- `/auth/verify` – Handles email confirmation from Supabase
-- `/auth/update-password` – Password reset handler and update form
+- `/auth/verify` – Handles email confirmation from Supabase and detect the redirection type if,
+- type 'signup' - then shows a email confirmation popup
+- type 'recovery' - then shows a Set New Password dialog
 
 These routes automatically capture Supabase redirect parameters and handle the logic for you.
 
