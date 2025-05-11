@@ -83,10 +83,7 @@ create table public.user_profile (
   updated_at timestamp with time zone null,
   constraint user_profile_pkey primary key (id),
   constraint user_profile_email_key unique (email),
-  constraint user_profile_username_key unique (username),
-  constraint user_profile_id_fkey foreign KEY (id) references auth.users (id),
-  constraint user_profile_full_name_check check ((length(full_name) <= 100)),
-  constraint user_profile_username_check check ((length(username) <= 25))
+  constraint user_profile_id_fkey foreign KEY (id) references auth.users (id)
 ) TABLESPACE pg_default;
 ```
 
